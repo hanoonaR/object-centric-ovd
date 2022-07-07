@@ -1,0 +1,9 @@
+_BASE_: "Base-OVD-RCNN-C4.yaml"
+MODEL:
+  WEIGHTS: saved_models/coco_ovd_base.pth
+  RKD_FEAT_PATH: datasets/MAVL_proposals/coco_props/classagnostic_distilfeats
+  DISTILLATION: True
+  DISTIL_L1_LOSS_WEIGHT: 0.15
+  NUM_DISTIL_PROP: 5
+  IRM_LOSS_WEIGHT: 0.15
+OUTPUT_DIR: output/coco_ovd_RKD

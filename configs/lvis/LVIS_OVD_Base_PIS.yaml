@@ -1,0 +1,38 @@
+_BASE_: "mask_rcnn_R50FPN_CLIP_sigmoid.yaml"
+MODEL:
+  META_ARCHITECTURE: "CustomRCNNMViT"
+  WEIGHTS: saved_models/lvis_ovd_base.pth
+  PIS_PROP_PATH: '' # datasets/MAVL_proposals/lvis_props/class_specific/imagenet_lvis_props (if pseudo props must be loaded from files)
+  ROI_BOX_HEAD:
+    WEIGHT_TRANSFER: False
+    ZEROSHOT_WEIGHT_PATH: 'datasets/zeroshot_weights/lvis_v1_clip_a+photo+cname.npy'
+    CAT_FREQ_PATH: 'datasets/lvis/lvis_v1_train_norare_cat_info.json'
+    IMAGE_LABEL_LOSS: 'pseudo_max_score'
+    USE_BIAS: -4.6
+INPUT:
+  CUSTOM_AUG: "ResizeShortestEdge"
+DATASETS:
+  TRAIN: ("lvis_v1_train_norare", "imagenet_lvis_v1_pis")
+  TEST: ("lvis_v1_val",)
+TEST:
+  DETECTIONS_PER_IMAGE: 300
+SOLVER:
+  BASE_LR: 0.02
+  STEPS: (60000, 80000)
+  MAX_ITER: 90000
+  WARMUP_FACTOR: 0.001
+  WARMUP_ITERS: 1000
+DATALOADER:
+  SAMPLER_TRAIN: "MultiDatasetSampler"
+  DATASET_RATIO: [ 1, 4 ]
+  USE_DIFF_BS_SIZE: True
+  DATASET_BS: [2, 8] # Batch-size per GPU
+  USE_RFS: [True, False]
+  DATASET_MIN_SIZES: [[640, 672, 704, 736, 768, 800], [400, 400]]
+  DATASET_MAX_SIZES: [1333, 667]
+  FILTER_EMPTY_ANNOTATIONS: False
+  MULTI_DATASET_GROUPING: True
+  DATASET_ANN: ['box', 'image']
+  NUM_WORKERS: 8
+WITH_IMAGE_LABELS: True
+OUTPUT_DIR: output/lvis_ovd_PIS

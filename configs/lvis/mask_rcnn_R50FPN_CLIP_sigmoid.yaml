@@ -1,0 +1,62 @@
+MODEL:
+  META_ARCHITECTURE: "CustomRCNN"
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  MASK_ON: True
+  BACKBONE:
+    NAME: "build_resnet_fpn_backbone"
+  RESNETS:
+    OUT_FEATURES: [ "res2", "res3", "res4", "res5" ]
+    DEPTH: 50
+  FPN:
+    IN_FEATURES: [ "res2", "res3", "res4", "res5" ]
+  ANCHOR_GENERATOR:
+    SIZES: [ [ 32 ], [ 64 ], [ 128 ], [ 256 ], [ 512 ] ]
+    ASPECT_RATIOS: [ [ 0.5, 1.0, 2.0 ] ]
+  RPN:
+    IN_FEATURES: [ "p2", "p3", "p4", "p5", "p6" ]
+    PRE_NMS_TOPK_TRAIN: 2000
+    PRE_NMS_TOPK_TEST: 1000
+    POST_NMS_TOPK_TRAIN: 1000
+    POST_NMS_TOPK_TEST: 1000
+  ROI_HEADS:
+    NAME: "CustomStandardROIHeads"
+    IN_FEATURES: [ "p2", "p3", "p4", "p5" ]
+    NUM_CLASSES: 1203
+    SCORE_THRESH_TEST: 0.0001
+  ROI_BOX_HEAD:
+    NAME: "FastRCNNConvFCHead"
+    NUM_FC: 2
+    POOLER_RESOLUTION: 7
+    CLS_AGNOSTIC_BBOX_REG: True
+    USE_ZEROSHOT_CLS: True
+    ZEROSHOT_WEIGHT_PATH: 'datasets/zeroshot_weights/lvis_v1_clip_a+photo+cname.npy'
+    CAT_FREQ_PATH: 'datasets/lvis/lvis_v1_train_norare_cat_info.json'
+    USE_SIGMOID_CE: True
+    USE_FED_LOSS: True
+    IGNORE_ZERO_CATS: True
+    USE_BIAS: -4.6
+  ROI_MASK_HEAD:
+    NAME: "MaskRCNNConvUpsampleHead"
+    CLS_AGNOSTIC_MASK: True
+    NUM_CONV: 4
+    POOLER_RESOLUTION: 14
+INPUT:
+  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+  MAX_SIZE_TRAIN: 1333
+DATASETS:
+  TRAIN: ("lvis_v1_train_norare",)
+  TEST: ("lvis_v1_val",)
+TEST:
+  DETECTIONS_PER_IMAGE: 300
+SOLVER:
+  IMS_PER_BATCH: 16 # Overall batch-size
+  BASE_LR: 0.02
+  STEPS: (60000, 80000)
+  MAX_ITER: 90000
+  WARMUP_FACTOR: 0.001
+  WARMUP_ITERS: 1000
+DATALOADER:
+  SAMPLER_TRAIN: "RepeatFactorTrainingSampler"
+  REPEAT_THRESHOLD: 0.001
+VERSION: 2
+OUTPUT_DIR: output/lvis_ovd_base

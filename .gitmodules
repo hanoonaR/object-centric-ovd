@@ -1,0 +1,3 @@
+[submodule "external/mavl"]
+	path = external/mavl
+	url = https://github.com/mmaaz60/mvits_for_class_agnostic_od.git

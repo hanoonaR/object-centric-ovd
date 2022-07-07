@@ -1,0 +1,22 @@
+_BASE_: "LVIS_OVD_Base_PIS.yaml"
+MODEL:
+  WEIGHTS: saved_models/lvis_ovd_rkd.pth
+  RKD_FEAT_PATH: datasets/MAVL_proposals/lvis_props/classagnostic_distilfeats/coco_distil_feats
+  RKD_ILS_FEAT_PATH: datasets/MAVL_proposals/lvis_props/classagnostic_distilfeats/imagenet_distil_feats
+  PIS_PROP_PATH: '' # datasets/MAVL_proposals/lvis_props/class_specific/imagenet_lvis_props (if pseudo props must be loaded from files)
+  DISTILLATION: True
+  DISTIL_L1_LOSS_WEIGHT: 0.25
+  NUM_DISTIL_PROP: 5
+  IRM_LOSS_WEIGHT: 0.13
+  ROI_BOX_HEAD:
+    WEIGHT_TRANSFER: True
+SOLVER:
+  BASE_LR: 0.02
+  STEPS: (480000, 640000)
+  MAX_ITER: 720000
+DATALOADER:
+  DATASET_MIN_SIZES: [[128, 160, 192, 224, 256, 288, 320, 352, 384, 416, 448, 480, 512, 544, 576, 608, 640, 672, 704,
+                       736, 768, 800, 832, 864, 896, 928, 960, 992, 1024, 1056, 1088, 1120, 1152, 1184, 1216, 1248,
+                       1280], [400, 400]]
+SEED: 9112072
+OUTPUT_DIR: output/lvis_ovd_RKD_PIS_WT_8x

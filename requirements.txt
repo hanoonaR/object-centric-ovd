@@ -1,0 +1,4 @@
+opencv-python
+scikit-learn
+lvis
+git+https://github.com/openai/CLIP.git

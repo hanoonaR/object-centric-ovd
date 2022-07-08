@@ -8,6 +8,11 @@ Official repository of paper titled "[Bridging the Gap between Object and Image-
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://www.youtube.com/embed/JHkuK1mjP28)
 [![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1t0tthvh_-dd1BvcmokEb-3FUIaEE31DD/view?usp=sharing)
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on-lvis-v1-0)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on-lvis-v1-0?p=bridging-the-gap-between-object-and-image)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on-mscoco)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on-mscoco?p=bridging-the-gap-between-object-and-image)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on-1)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on-1?p=bridging-the-gap-between-object-and-image)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on?p=bridging-the-gap-between-object-and-image)
+
 ## :rocket: News
 * **(July 7, 2022)**
   * Training and evaluation code with pretrained models are released.

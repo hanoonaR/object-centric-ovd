@@ -233,10 +233,10 @@ For COCO, base and novel categories are shown in <font color="purple">purple</fo
 
 ## BibTeX
 ```
-@article{Rasheed2022Bridging,
+@article{Hanoona2022Bridging,
         title={Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection},
         author={Hanoona Rasheed, Muhammad Maaz, Muhammad Uzair Khattak, Salman Khan and Fahad Shahbaz},
-        journal={ArXiv},
+        journal={2207.03482},
         year={2022}
     }
 ```

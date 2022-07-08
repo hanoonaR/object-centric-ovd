@@ -1,10 +1,10 @@
 # Object Centric Open Vocabulary Detection
-Official repository of paper titled "[Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection]()".
+Official repository of paper titled "[Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection](https://arxiv.org/abs/2207.03482)".
 
 [Hanoona Rasheed](https://scholar.google.com/citations?user=yhDdEuEAAAAJ&hl=en&authuser=1&oi=sra), [Muhammad Maaz](https://scholar.google.com/citations?user=vTy9Te8AAAAJ&hl=en&authuser=1&oi=sra), [Muhammad Uzair Khattak](https://scholar.google.com/citations?user=M6fFL4gAAAAJ&hl=en&authuser=1), [Salman Khan](https://salman-h-khan.github.io/), [Fahad Shahbaz Khan](https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en)
 
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://hanoonar.github.io/object-centric-ovd)
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]()
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2207.03482)
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://www.youtube.com/embed/JHkuK1mjP28)
 [![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1t0tthvh_-dd1BvcmokEb-3FUIaEE31DD/view?usp=sharing)
 
@@ -115,10 +115,10 @@ python train_net.py --num-gpus 8 --config-file /path/to/config/name.yaml --eval-
 ## Citation
 If you use our work, please consider citing:
 ```bibtex
- @article{Rasheed2022Bridging,
+ @article{Hanoona2022Bridging,
     title={Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection},
     author={Hanoona Rasheed, Muhammad Maaz, Muhammad Uzair Khattak, Salman Khan and Fahad Shahbaz Khan},
-    journal={ArXiv},
+    journal={2207.03482},
     year={2022}
     }
 ```

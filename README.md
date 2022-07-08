@@ -115,7 +115,7 @@ python train_net.py --num-gpus 8 --config-file /path/to/config/name.yaml --eval-
 ## Citation
 If you use our work, please consider citing:
 ```bibtex
- @article{Rasheed2022Bridging,
+ @article{Hanoona2022Bridging,
     title={Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection},
     author={Hanoona Rasheed, Muhammad Maaz, Muhammad Uzair Khattak, Salman Khan and Fahad Shahbaz Khan},
     journal={arXiv:2207.03482},

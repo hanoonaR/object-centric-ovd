@@ -38,7 +38,7 @@ Official repository of paper titled "[Bridging the Gap between Object and Image-
 ## Main Contributions
 
 1) **Region-based Knowledge Distillation (RKD)** adapts image-centric language representations to be object-centric.
-2) **Pesudo Image-level Supervision (PIS)** uses weak image-level supervision from pretrained multi-modal ViTs to improve generalization of the detector to novel classes.
+2) **Pesudo Image-level Supervision (PIS)** uses weak image-level supervision from pretrained multi-modal ViTs(MAVL) to improve generalization of the detector to novel classes.
 3) **Weight Transfer function** efficiently combines above two proposed components.
 
 <hr />

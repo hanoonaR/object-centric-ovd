@@ -6,7 +6,10 @@ The code is tested with PyTorch 1.10.0 and CUDA 11.3. After cloning the reposito
 - PyTorch ≥ 1.8
 - Detectron2: follow [Detectron2 installation instructions](https://detectron2.readthedocs.io/tutorials/install.html).
 
-1. Clone the repository and update the submodules
+Our project uses a submodule `mavl` for generating psuedo proposals from MViT model MAVL. The proposals have been
+provided with the datasets and detailed in [DATASETS.md](DATASETS.md). The submodule is required to generate the pseudo-proposals.
+If you forget to add --recurse-submodules when you clone the repository, do:
+1. Update the submodules [optional]
 ```shell
 git clone https://github.com/hanoonaR/object-centric-ovd.git
 git submodule init

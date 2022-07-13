@@ -200,9 +200,9 @@ python tools/remove_lvis_rare.py --ann datasets/lvis/lvis_v1_train.json
 
 This will generate `datasets/lvis/lvis_v1_train_norare.json`.
 
-`lvis_v1_train_cat_info.json` is used by the Federated loss.  This is created by 
+`lvis_v1_train_norare_cat_info.json` is used by the Federated loss.  This is created by 
 ```
-python tools/get_lvis_cat_info.py --ann datasets/lvis/lvis_v1_train.json
+python tools/get_lvis_cat_info.py --ann datasets/lvis/lvis_v1_train_norare.json
 ```
 2) Annotations for PIS
 

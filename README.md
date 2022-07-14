@@ -5,7 +5,7 @@ Official repository of paper titled "[Bridging the Gap between Object and Image-
 
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://hanoonar.github.io/object-centric-ovd)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2207.03482)
-[![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://www.youtube.com/embed/JHkuK1mjP28)
+[![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/QLlxulFV0KE)
 [![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1t0tthvh_-dd1BvcmokEb-3FUIaEE31DD/view?usp=sharing)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on-lvis-v1-0)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on-lvis-v1-0?p=bridging-the-gap-between-object-and-image)

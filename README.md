@@ -127,7 +127,7 @@ If you use our work, please consider citing:
     year={2022}
     }
     
-@inproceedings{Maaz2021Multimodal,
+@inproceedings{Maaz2022Multimodal,
       title={Class-agnostic Object Detection with Multi-modal Transformer},
       author={Muhammad Maaz and Hanoona Rasheed and Salman Khan and Fahad Shahbaz Khan and Rao Muhammad Anwer and Ming-Hsuan Yang},
       booktitle={17th European Conference on Computer Vision},

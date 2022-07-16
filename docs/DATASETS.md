@@ -39,7 +39,7 @@ and evaluation `instances_val2017_all_2_oriorder.json`, and annotations for imag
 can be downloaded from [here](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/hanoona_bangalath_mbzuai_ac_ae/EhJUv1cVKJtCnZJzsvGgVwYBgxP6M9TWsD-PBb_KgOjhmQ?e=iYkfDZ).
 
 The CLIP image features on class-agnostic MAVL proposals for region-based knowledge distillation (RKD) and
-class-specific proposals for pseudo image-level supervision (PIS) can be downloaded from [here]().
+class-specific proposals for pseudo image-level supervision (PIS) can be downloaded from [here](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/hanoona_bangalath_mbzuai_ac_ae/EeJuo844j8FIsnuiX3wBxCgBcBR2MSjbhiLCuA4OC2cSWg?e=5BeESO).
 Untar the file `coco_props.tar.gz` and place in the corresponding location as shown below:
 
 ```
@@ -141,6 +141,11 @@ and annotations for image-level supervision `imagenet_lvis_v1_pis` can be downlo
 [here](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/hanoona_bangalath_mbzuai_ac_ae/Eg22Nzk-QelGgjhSKwtQ25QB_FgDR92VOQU3lr79uMXqqQ?e=FSsFnt)
 Note: The provided ImageNet annoatations `imagenet_lvis_image_info_pis` contains the MAVL class-specific 
 predictions for the corresponding LVIS categories, to speed-up training. 
+
+The CLIP image features on class-agnostic MAVL proposals for region-based knowledge distillation (RKD) on ImageNet
+can be downloaded from [here](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/hanoona_bangalath_mbzuai_ac_ae/El9e1sKtdgBHlSxs0rEul5IBi2gcQBGthxXo0u4u-PlNcQ?e=VbqHDY).
+The MAVL proposals on LVIS images are same as proposals generated for COCO, which can be downloaded from [here](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/hanoona_bangalath_mbzuai_ac_ae/EeJuo844j8FIsnuiX3wBxCgBcBR2MSjbhiLCuA4OC2cSWg?e=5BeESO).
+Untar the file `imagenet_distil_feats.tar` and `coco_props.tar.gz`, and place in the corresponding location as shown below:
 
 ```
 lvis/

@@ -1,4 +1,4 @@
-# Object Centric Open Vocabulary Detection
+# Object Centric Open Vocabulary Detection (NeurIPS 2022)
 Official repository of paper titled "[Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection](https://arxiv.org/abs/2207.03482)".
 
 [Hanoona Rasheed](https://scholar.google.com/citations?user=yhDdEuEAAAAJ&hl=en&authuser=1&oi=sra), [Muhammad Maaz](https://scholar.google.com/citations?user=vTy9Te8AAAAJ&hl=en&authuser=1&oi=sra), [Muhammad Uzair Khattak](https://scholar.google.com/citations?user=M6fFL4gAAAAJ&hl=en&authuser=1), [Salman Khan](https://salman-h-khan.github.io/), [Fahad Shahbaz Khan](https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en)
@@ -14,6 +14,8 @@ Official repository of paper titled "[Bridging the Gap between Object and Image-
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on?p=bridging-the-gap-between-object-and-image)
 
 ## :rocket: News
+* **(Sep 15, 2022)**
+  * Paper accepted at NeurIPS 2022.
 * **(July 7, 2022)**
   * Training and evaluation code with pretrained models are released.
 

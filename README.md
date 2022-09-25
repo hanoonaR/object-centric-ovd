@@ -124,14 +124,14 @@ If you use our work, please consider citing:
 ```bibtex
 @inproceedings{Hanoona2022Bridging,
     title={Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection},
-    author={Hanoona Rasheed, Muhammad Maaz, Muhammad Uzair Khattak, Salman Khan and Fahad Shahbaz Khan},
+    author={Rasheed, Hanoona and Maaz, Muhammad and Khattak, Muhammad Uzair  and Khan, Salman and Khan, Fahad Shahbaz},
     booktitle={36th Conference on Neural Information Processing Systems (NIPS)},
     year={2022}
 }
     
 @inproceedings{Maaz2022Multimodal,
       title={Class-agnostic Object Detection with Multi-modal Transformer},
-      author={Muhammad Maaz and Hanoona Rasheed and Salman Khan and Fahad Shahbaz Khan and Rao Muhammad Anwer and Ming-Hsuan Yang},
+      author={Maaz, Muhammad and Rasheed, Hanoona and Khan, Salman and Khan, Fahad Shahbaz and Anwer, Rao Muhammad and Yang, Ming-Hsuan},
       booktitle={17th European Conference on Computer Vision (ECCV)},
       year={2022},
       organization={Springer}

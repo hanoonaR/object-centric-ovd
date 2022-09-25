@@ -8,10 +8,10 @@ Official repository of paper titled "[Bridging the Gap between Object and Image-
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/QLlxulFV0KE)
 [![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1t0tthvh_-dd1BvcmokEb-3FUIaEE31DD/view?usp=sharing)
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on-lvis-v1-0)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on-lvis-v1-0?p=bridging-the-gap-between-object-and-image)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on-mscoco)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on-mscoco?p=bridging-the-gap-between-object-and-image)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on-1)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on-1?p=bridging-the-gap-between-object-and-image)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on?p=bridging-the-gap-between-object-and-image)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on-lvis-v1-0)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on-lvis-v1-0?p=bridging-the-gap-between-object-and-image)
 
 ## :rocket: News
 * **(Sep 15, 2022)**
@@ -122,17 +122,17 @@ python train_net.py --num-gpus 8 --config-file /path/to/config/name.yaml --eval-
 ## Citation
 If you use our work, please consider citing:
 ```bibtex
- @article{Hanoona2022Bridging,
+@inproceedings{Hanoona2022Bridging,
     title={Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection},
     author={Hanoona Rasheed, Muhammad Maaz, Muhammad Uzair Khattak, Salman Khan and Fahad Shahbaz Khan},
-    journal={arXiv:2207.03482},
+    booktitle={36th Conference on Neural Information Processing Systems (NIPS)},
     year={2022}
-    }
+}
     
 @inproceedings{Maaz2022Multimodal,
       title={Class-agnostic Object Detection with Multi-modal Transformer},
       author={Muhammad Maaz and Hanoona Rasheed and Salman Khan and Fahad Shahbaz Khan and Rao Muhammad Anwer and Ming-Hsuan Yang},
-      booktitle={17th European Conference on Computer Vision},
+      booktitle={17th European Conference on Computer Vision (ECCV)},
       year={2022},
       organization={Springer}
 }

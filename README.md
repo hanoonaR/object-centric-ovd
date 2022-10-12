@@ -54,7 +54,7 @@ All of our models are trained using 8 A100 GPUs.
 <hr />
 
 ## Demo: Create your own custom detector
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](object_centric_ovd_demo.ipynb) Checkout our demo using our interactive colab notebook. Create your own custom detector with your own class names. 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](Object_Centric_OVD_Demo.ipynb) Checkout our demo using our interactive colab notebook. Create your own custom detector with your own class names. 
 
 
 ## Results

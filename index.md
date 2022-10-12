@@ -9,35 +9,30 @@
 
 ![main figure](docs/OVD_block_diag.png)
 <p align="justify">
-Existing open-vocabulary object detectors typically enlarge their vocabulary sizes by leveraging 
-different forms of weak supervision. This helps generalize to novel objects at inference. Two popular forms of 
- weak-supervision used in open-vocabulary detection (OVD) include pretrained CLIP model and image-level supervision.
- We note that both these modes of supervision are not optimally aligned for the detection task: CLIP is trained
- with image-text pairs and lacks precise localization of objects while the image-level supervision has been used with
- heuristics that do not accurately specify local object regions. In this work, we propose to address this problem by
- performing object-centric alignment  of the language embeddings from the CLIP model. Furthermore, we visually ground
- the objects with only image-level supervision using a pseudo-labeling process that provides high-quality object 
- proposals and helps expand the vocabulary during training. We establish a bridge between the above two
- object-alignment strategies via a novel weight transfer function that aggregates their complimentary strengths.
- In essence, the proposed model seeks to minimize the gap between object and image-centric representations in the
- OVD setting. On the COCO benchmark, our proposed approach achieves 40.3 AP50 on novel classes, an absolute 11.9
- gain over the previous best performance. For LVIS, we surpass the state-of-the-art ViLD model by 5.0 mask AP for rare
- categories and 3.4 overall. </p>
- 
+Existing open-vocabulary object detectors typically enlarge their vocabulary sizes by leveraging different forms of 
+weak supervision. This helps generalize to novel objects at inference. Two popular forms of weak-supervision used in 
+open-vocabulary detection (OVD) include pretrained CLIP model and image-level supervision. We note that both these 
+modes of supervision are not optimally aligned for the detection task: CLIP is trained with image-text pairs 
+and lacks precise localization of objects while the image-level supervision has been used with heuristics that do not 
+accurately specify local object regions. In this work, we propose to address this problem by performing object-centric 
+alignment  of the language embeddings from the CLIP model. Furthermore, we visually ground the objects with only 
+image-level supervision using a pseudo-labeling process that provides high-quality object proposals and helps expand 
+the vocabulary during training. We establish a bridge between the above two object-alignment strategies via a novel 
+weight transfer function that aggregates their complimentary strengths. In essence, the proposed model seeks to 
+minimize the gap between object and image-centric representations in the OVD setting. On the COCO benchmark, our 
+proposed approach achieves 36.6 AP50 on novel classes, an absolute 8.2 gain over the previous best performance. 
+For LVIS, we surpass the state-of-the-art ViLD model by 5.0 mask AP for rare categories and 3.4 overall.</p>
 
- 
-## TSNE Visualizations
+## Qualitative Results (Open Vocabulary Setting)
 
-t-SNE plots of CLIP and our detector region embeddings on COCO novel categories.
+For COCO, base and novel categories are shown in <font color="purple">purple</font> and <font color="green">green</font> colors respectively.
 
-![tSNE_plots](docs/tSNE_plots.png)
+![results](docs/coco_lvis.jpg)
 
+## Qualitative Results (Cross Datasets transfer)
 
-## Region Embeddings Similarity Matrices
+![results](docs/cross_data.jpg)
 
-Plots of the Region Embeddings similarity matrices of COCO Novel categories by CLIP and our detector. 
-
-![SPKD](docs/similarity_matrix.png)
  
 ## Model Zoo
 
@@ -217,18 +212,21 @@ We show compare our method with Detic, by building on their strong LVIS baseline
 </table>
 </center>
 
-<br/> 
+<br/>
 
 
-## Qualitative Results (Open Vocabulary Setting)
+## TSNE Visualizations
 
-For COCO, base and novel categories are shown in <font color="purple">purple</font> and <font color="green">green</font> colors respectively.
+t-SNE plots of CLIP and our detector region embeddings on COCO novel categories.
 
-![results](docs/coco_lvis.jpg)
+![tSNE_plots](docs/tSNE_plots.png)
 
-## Qualitative Results (Cross Datasets transfer)
 
-![results](docs/cross_data.jpg)
+## Region Embeddings Similarity Matrices
+
+Plots of the Region Embeddings similarity matrices of COCO Novel categories by CLIP and our detector. 
+
+![SPKD](docs/similarity_matrix.png)
 
 
 ## BibTeX

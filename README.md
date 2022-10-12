@@ -5,6 +5,7 @@ Official repository of paper titled "[Bridging the Gap between Object and Image-
 
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://hanoonar.github.io/object-centric-ovd)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2207.03482)
+[![Colab Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19LBqQg0cS36rTLL_TaXZ7Ka9KJGkxiSe?usp=sharing) 
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/QLlxulFV0KE)
 [![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://drive.google.com/file/d/1t0tthvh_-dd1BvcmokEb-3FUIaEE31DD/view?usp=sharing)
 
@@ -14,6 +15,8 @@ Official repository of paper titled "[Bridging the Gap between Object and Image-
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bridging-the-gap-between-object-and-image/open-vocabulary-object-detection-on-lvis-v1-0)](https://paperswithcode.com/sota/open-vocabulary-object-detection-on-lvis-v1-0?p=bridging-the-gap-between-object-and-image)
 
 ## :rocket: News
+* **(Oct 12, 2022)**
+  * Interactive colab demo released.
 * **(Sep 15, 2022)**
   * Paper accepted at NeurIPS 2022.
 * **(July 7, 2022)**
@@ -50,6 +53,10 @@ The code is tested with PyTorch 1.10.0 and CUDA 11.3. After cloning the reposito
 All of our models are trained using 8 A100 GPUs. 
 <hr />
 
+## Demo: Create your own custom detector
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](object_centric_ovd_demo.ipynb) Checkout our demo using our interactive colab notebook. Create your own custom detector with your own class names. 
+
+
 ## Results
 We present performance of Object-centric Open Vocabulary object detector that demonstrates state-of-the-art results on Open Vocabulary COCO and LVIS benchmark datasets.
 For COCO, base and novel categories are shown in purple and green colors respectively.
@@ -59,14 +66,14 @@ For COCO, base and novel categories are shown in purple and green colors respect
 ### Open-vocabulary COCO
 Effect of individual components in our method. Our weight transfer method provides complimentary gains from RKD and ILS, achieving superior results as compared to naively adding both components.
 
-| Name                                                                                        |  APnovel  | APbase |   AP   | Train-time | Download                                                                                                                            |
-|:--------------------------------------------------------------------------------------------|:---------:|:------:|:------:|:----------:|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Base-OVD-RCNN-C4](configs/coco/Base-OVD-RCNN-C4.yaml)                                      |    1.7    |  53.2  |  39.6  |     8h     |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_base.pth) |
-| [COCO_OVD_Base_RKD](configs/coco/COCO_OVD_Base_RKD.yaml)                                    |   21.6    |  54.4  |  45.8  |     8h     |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_rkd.pth) |
-| [COCO_OVD_Base_PIS](configs/coco/COCO_OVD_Base_PIS.yaml)                                    |   34.2    |  52.0  |  47.4  |    8.5h    |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_pis.pth) |
-| [COCO_OVD_RKD_PIS](configs/coco/COCO_OVD_RKD_PIS.yaml)                                      |   35.3    |  52.9  |  48.3  |    8.5h    |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_rkd_pis.pth) |
-| [COCO_OVD_RKD_PIS_WeightTransfer](configs/coco/COCO_OVD_RKD_PIS_WeightTransfer.yaml)        |   40.3    |  54.1  |  50.5  |    8.5h    |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_rkd_pis_weighttransfer.pth) |
-| [COCO_OVD_RKD_PIS_WeightTransfer_8x](configs/coco/COCO_OVD_RKD_PIS_WeightTransfer_8x.yaml)  |   40.5    |  56.7  |  52.5  |  2.5 days  |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_rkd_pis_weighttransfer_8x.pth) |
+| Name                                                                                        | APnovel | APbase |  AP  | Train-time | Download                                                                                                                            |
+|:--------------------------------------------------------------------------------------------|:-------:|:------:|:----:|:----------:|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Base-OVD-RCNN-C4](configs/coco/Base-OVD-RCNN-C4.yaml)                                      |   1.7   |  53.2  | 39.6 |     8h     |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_base.pth) |
+| [COCO_OVD_Base_RKD](configs/coco/COCO_OVD_Base_RKD.yaml)                                    |  21.2   |  54.7  | 45.9 |     8h     |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_rkd.pth) |
+| [COCO_OVD_Base_PIS](configs/coco/COCO_OVD_Base_PIS.yaml)                                    |  30.4   |  52.6  | 46.8 |    8.5h    |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_pis.pth) |
+| [COCO_OVD_RKD_PIS](configs/coco/COCO_OVD_RKD_PIS.yaml)                                      |  31.5   |  52.8  | 47.2 |    8.5h    |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_rkd_pis.pth) |
+| [COCO_OVD_RKD_PIS_WeightTransfer](configs/coco/COCO_OVD_RKD_PIS_WeightTransfer.yaml)        |  36.6   |  54.0  | 49.4 |    8.5h    |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_rkd_pis_weighttransfer.pth) |
+| [COCO_OVD_RKD_PIS_WeightTransfer_8x](configs/coco/COCO_OVD_RKD_PIS_WeightTransfer_8x.yaml)  |  36.9   |  56.6  | 51.5 |  2.5 days  |[model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/coco_ovd_rkd_pis_weighttransfer_8x.pth) |
 
 ### New LVIS Baseline
 Our Mask R-CNN based LVIS Baseline ([mask_rcnn_R50FPN_CLIP_sigmoid](configs/lvis/mask_rcnn_R50FPN_CLIP_sigmoid.yaml)) 
@@ -83,14 +90,14 @@ We believe this could be a good baseline to be considered for the future researc
 
 ### Open-vocabulary LVIS
 
-| Name                                                                                       |   APr   |  APc   |  APf  |  AP   | Train-time  | Download                                                                                                                  |
-|--------------------------------------------------------------------------------------------|:-------:|:------:|:-----:|:-----:|:-----------:|---------------------------------------------------------------------------------------------------------------------------|
-| [mask_rcnn_R50FPN_CLIP_sigmoid](configs/lvis/mask_rcnn_R50FPN_CLIP_sigmoid.yaml)           |  12.2   |  19.4  | 26.4  | 20.9  |    4.5h     | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_base.pth) |
-| [LVIS_OVD_Base_RKD](configs/lvis/LVIS_OVD_Base_RKD.yaml)                                   |  15.2   |  20.2  | 27.3  | 22.1  |    4.5h     | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_rkd.pth) |
-| [LVIS_OVD_Base_PIS](configs/lvis/LVIS_OVD_Base_PIS.yaml)                                   |  17.0   |  21.2  | 26.1  | 22.4  |     5h      | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_pis.pth) |
-| [LVIS_OVD_RKD_PIS](configs/lvis/LVIS_OVD_RKD_PIS.yaml)                                     |  17.3   |  20.9  | 25.5  | 22.1  |     5h      | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_rkd_pis.pth) |
-| [LVIS_OVD_RKD_PIS_WeightTransfer](configs/lvis/LVIS_OVD_RKD_PIS_WeightTransfer.yaml)       |  17.2   |  21.5  | 26.6  | 22.8  |     5h      | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_rkd_pis_weighttransfer.pth) |
-| [LVIS_OVD_RKD_PIS_WeightTransfer_8x](configs/lvis/LVIS_OVD_RKD_PIS_WeightTransfer_8x.yaml) |  21.1   |  25.0  | 29.1  | 25.9  |  1.5 days   | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_rkd_pis_weighttransfer_8x.pth) |
+| Name                                                                                       | APr  | APc  | APf  |  AP   | Train-time  | Download                                                                                                                  |
+|--------------------------------------------------------------------------------------------|:----:|:----:|:----:|:-----:|:-----------:|---------------------------------------------------------------------------------------------------------------------------|
+| [mask_rcnn_R50FPN_CLIP_sigmoid](configs/lvis/mask_rcnn_R50FPN_CLIP_sigmoid.yaml)           | 12.2 | 19.4 | 26.4 | 20.9  |    4.5h     | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_base.pth) |
+| [LVIS_OVD_Base_RKD](configs/lvis/LVIS_OVD_Base_RKD.yaml)                                   | 15.2 | 20.2 | 27.3 | 22.1  |    4.5h     | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_rkd.pth) |
+| [LVIS_OVD_Base_PIS](configs/lvis/LVIS_OVD_Base_PIS.yaml)                                   | 17.0 | 21.2 | 26.1 | 22.4  |     5h      | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_pis.pth) |
+| [LVIS_OVD_RKD_PIS](configs/lvis/LVIS_OVD_RKD_PIS.yaml)                                     | 17.3 | 20.9 | 25.5 | 22.1  |     5h      | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_rkd_pis.pth) |
+| [LVIS_OVD_RKD_PIS_WeightTransfer](configs/lvis/LVIS_OVD_RKD_PIS_WeightTransfer.yaml)       | 17.1 | 21.4 | 26.7 | 22.8  |     5h      | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_rkd_pis_weighttransfer.pth) |
+| [LVIS_OVD_RKD_PIS_WeightTransfer_8x](configs/lvis/LVIS_OVD_RKD_PIS_WeightTransfer_8x.yaml) | 21.1 | 25.0 | 29.1 | 25.9  |  1.5 days   | [model](https://github.com/hanoonaR/object-centric-ovd/releases/download/v1.0/lvis_ovd_rkd_pis_weighttransfer_8x.pth) |
 
 
 ### t-SNE plots
